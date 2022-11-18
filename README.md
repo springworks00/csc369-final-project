@@ -23,6 +23,7 @@ we would have to evaluate each linear-regression model with a cross-validation s
 Finding which variables are "better" predictors is the whole purpose of linear regression,
 but if calculating this score is not necessary for an "A" then let's not worry about it.
 
+
 Todo:
 - [x] Push a working spark project template (Lan)
 - [ ] Push a build script for convenience (Dylan)

@@ -23,10 +23,12 @@ we would have to evaluate each linear-regression model with a cross-validation s
 Finding which variables are "better" predictors is the whole purpose of linear regression,
 but if calculating this score is not necessary for an "A" then let's not worry about it.
 
+NOTE: I am still struggling to run this project. If someone else wants to push a build
+script for convenience to deal with that crazy spark-submit command, feel free.
 
 Todo:
 - [x] Push a working spark project template (Lan)
-- [ ] Push a build script for convenience (Dylan)
+- [ ] Push a build script for convenience
 - [ ] Find a Scala graphing library (scatter plot + line)
 
 Essential Features:

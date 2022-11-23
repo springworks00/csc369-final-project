@@ -23,7 +23,8 @@ The challenge is solely distributing the work, not trying to comprehend some com
 
 ### Role 3
 Combine the code of Roles 1 and 2, writing all the other RDD glue code/data re-formatting. 
-Get the inputs and print the outputs. Make the whole program work, and be sure the code is fully understandable.
+Get the inputs and print the outputs. Make the whole program work, be sure the code is fully understandable,
+and make use of key functions we learned in class where possible.
 
 ### Role 4
 Setup the project, bring all the code together onto the server with no bugs, comment the code (just enough to help him grade), 

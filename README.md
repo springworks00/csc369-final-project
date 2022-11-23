@@ -3,17 +3,15 @@ Linear Regression
 
 [Housing Data](https://www.kaggle.com/datasets/thuynyle/redfin-housing-market-data?select=zip_code_market_tracker.tsv000)
 
-There are 5 files in this set, describing the housing markets on a (1) national, (2) state, (3) county, (4) neighborhood, and (5) zip basis. 
+Per Lan's request, we'll only use the ZIP-based data file (3 GB).
 
 ### Final Product
 Input: name of x variable and the data files
 Output: printed regression equation `y=mx+b` where `y` is the median home price (we need to calculate `m` and `b`)
 
 ### Role 1
-Determine what kind of joins we can do with the 5 data sets, then implement the joins in Scala. (It must be complex)
-
-The reason this is its own role is because I can't see an easy way to make joins relevant to this data set.
-It will require some creativity. We are not going to change the data set.
+Cut down the size of the ZIP data set and split it into multiple, join-able files.
+Then write the scala code to re-join these files. Make sure it is complex enough.
 
 ### Role 2
 Implement the single (not multi) linear regression algorithm, 

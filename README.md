@@ -17,7 +17,7 @@ Then write the scala code to re-join these files. Make sure it is complex enough
 Implement the single (not multi) linear regression algorithm, 
 making it suitable for distributed RDD computations: 
 [Linear Regression (Python Implementation) - GeeksforGeeks](https://www.geeksforgeeks.org/linear-regression-python-implementation/) 
-If this is not implemented properly, our code will take way to long to run (we’re dealing with multiple GBs of data)
+Make sure this runs fast enough (i.e. just stay true to the principles learned in class)
 
 Note that the regression function is super simple. 
 The challenge is solely distributing the work, not trying to comprehend some complex concept.

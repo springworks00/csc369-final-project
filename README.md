@@ -6,32 +6,31 @@ Linear Regression
 There are 5 files in this set, describing the housing markets on a (1) national, (2) state, (3) county, (4) neighborhood, and (5) zip basis. 
 There is plenty of `join`-ready material to work with because each file's columns are nearly identical.
 
-Pick a few quantitative variables not related to price (i.e. `new_listings_mom`, `inventory`, `sold_above_list`) and scatter-plot
-them against:
 
-1. The median home price within a ZIP.
-2. The median home price within a neighborhood.
-3. The median home price within a county.
-4. (etc)
+### Final Product
+Input: name of x variable and the data files
+Output: regression equation `y=mx+b` where `y` is the median home price (we need to calculate `m` and `b`)
 
-(i.e. `y=median_sale_price` and `x=new_listings_mom`)
+### Role 1
+Determine what kind of joins we can do with the 5 data sets, then implement the joins in Scala. (It must be complex)
 
-Then, graph a linear-regression line through each scatter plot.
+### Role 2
+Implement the single (not multi) linear regression algorithm, 
+making it suitable for distributed RDD computations: 
+[Linear Regression (Python Implementation) - GeeksforGeeks](https://www.geeksforgeeks.org/linear-regression-python-implementation/) 
+If this is not implemented properly, our code will take way to long to run (we’re dealing with multiple GBs of data)
 
-In order to see which variables are "better" at predicting the median prices,
-we would have to evaluate each linear-regression model with a cross-validation score.
-Finding which variables are "better" predictors is the whole purpose of linear regression,
-but if calculating this score is not necessary for an "A" then let's not worry about it.
+### Role 3
+Combine the code of Roles 1 and 2, writing all the other RDD glue code/data re-formatting. 
+Get the inputs and print the outputs. Make the whole program work, and be sure the code is fully understandable.
 
-NOTE: I am still struggling to run this project. If someone else wants to push a build
-script for convenience to deal with that crazy spark-submit command, feel free.
+### Role 4
+Setup the project, bring all the code together onto the server with no bugs, comment the code (just enough to help him grade), show examples of different x-variables being used, and submit it. Fully responsible for managing the project and seeing it through.
 
-Todo:
-- [x] Push a working spark project template (Lan)
-- [ ] Push a build script for convenience
-- [ ] Find a Scala graphing library (scatter plot + line)
+### Other Notes:
+Just to be clear, the thing to be “distributed” is the linear regression calculation (finding the `m` and `b` of `y=mx+b`). If you look at the link, you’ll see a lot of `sum` and `mean` calls.
 
-Essential Features:
-1. Join files + other skills learned from class
-2. Calculate the regression (distributed)
-3. Graph the regression
+After thinking about it, I see no reason we need to graph these results. Let’s just print the y=mx+b equation.
+
+`y=median_sale_price` (always)
+

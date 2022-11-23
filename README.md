@@ -12,6 +12,9 @@ Output: printed regression equation `y=mx+b` where `y` is the median home price 
 ### Role 1
 Determine what kind of joins we can do with the 5 data sets, then implement the joins in Scala. (It must be complex)
 
+The reason this is its own role is because I can't see an easy way to make joins relevant to this data set.
+It will require some creativity. We are not going to change the data set.
+
 ### Role 2
 Implement the single (not multi) linear regression algorithm, 
 making it suitable for distributed RDD computations: 

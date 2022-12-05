@@ -1,0 +1,34 @@
+Dataset contains 3 files:
+    + Addresses.in : list of all house addresses
+    + FloorPlans.in : list of all floor plans
+    + Sales.in : list of all sale listings
+
+----------------------------------------------------------------------------------------------------------------
+
+1/ Addresses.in
+    + id : unique identifier of a house
+    + fullAddress : full address of the house
+    + street : street of the fullAddress
+    + city : city of the fullAddress
+    + state : state of the fullAddress
+    + zip : zipcode of the fullAddress
+
+----------------------------------------------------------------------------------------------------------------
+
+2/ FloorPlans.in
+    + floorPlanId : unique identifier of a floor plan
+    + houseId : id of the house
+    + bed : number of bedrooms
+    + bath : number of bathrooms
+    + acreLot : the land area in Acre
+    + houseSize: the size of the house
+
+----------------------------------------------------------------------------------------------------------------
+
+3/ Sales.in
+    + saleId : id of a sale listing
+    + houseId : id of the house
+    + floorPlanId : id of the floor plan
+    + saleStatus : status of the listing
+    + price : the price of the house
+    + soldDate : the date when the listing was sold

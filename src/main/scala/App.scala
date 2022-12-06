@@ -79,6 +79,10 @@ object App {
        *.saveAsTextFile("out")*/
   }
 
+  def makeRegression() = {
+
+  }
+
   def main(args: Array[String]): Unit = {
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)

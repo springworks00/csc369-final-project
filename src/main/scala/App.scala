@@ -78,6 +78,44 @@ object App {
        *.repartition(1) // needed so that the outputs will be written to just 1 file
        *.saveAsTextFile("out")*/
   }
+  
+  object App {
+  def helper(rdd: RDD[(String, String, String, String, String, String, String, String, String, String, String, String)],
+             x: Int, y: Int): RDD[(String, String, String, String, String, String, String, String, String, String, String, String)] = {
+    var filteredRdd = rdd
+    x match {
+      case 1 => (filteredRdd = rdd.filter(row => !row._1.isEmpty))
+      case 2 => (filteredRdd = rdd.filter(row => !row._2.isEmpty))
+      case 3 => (filteredRdd = rdd.filter(row => !row._3.isEmpty))
+      case 4 => (filteredRdd = rdd.filter(row => !row._4.isEmpty))
+      case 5 => (filteredRdd = rdd.filter(row => !row._5.isEmpty))
+      case 6 => (filteredRdd = rdd.filter(row => !row._6.isEmpty))
+      case 7 => (filteredRdd = rdd.filter(row => !row._7.isEmpty))
+      case 8 => (filteredRdd = rdd.filter(row => !row._8.isEmpty))
+      case 9 => (filteredRdd = rdd.filter(row => !row._9.isEmpty))
+      case 10 => (filteredRdd = rdd.filter(row => !row._10.isEmpty))
+      case 11 => (filteredRdd = rdd.filter(row => !row._11.isEmpty))
+      case 12 => (filteredRdd = rdd.filter(row => !row._12.isEmpty))
+    }
+
+    y match {
+      case 1 => (filteredRdd = filteredRdd.filter(row => !row._1.isEmpty))
+      case 2 => (filteredRdd = filteredRdd.filter(row => !row._2.isEmpty))
+      case 3 => (filteredRdd = filteredRdd.filter(row => !row._3.isEmpty))
+      case 4 => (filteredRdd = filteredRdd.filter(row => !row._4.isEmpty))
+      case 5 => (filteredRdd = filteredRdd.filter(row => !row._5.isEmpty))
+      case 6 => (filteredRdd = filteredRdd.filter(row => !row._6.isEmpty))
+      case 7 => (filteredRdd = filteredRdd.filter(row => !row._7.isEmpty))
+      case 8 => (filteredRdd = filteredRdd.filter(row => !row._8.isEmpty))
+      case 9 => (filteredRdd = filteredRdd.filter(row => !row._9.isEmpty))
+      case 10 => (filteredRdd = filteredRdd.filter(row => !row._10.isEmpty))
+      case 11 => (filteredRdd = filteredRdd.filter(row => !row._11.isEmpty))
+      case 12 => (filteredRdd = filteredRdd.filter(row => !row._12.isEmpty))
+    }
+
+
+    return filteredRdd;
+  }
 
   def main(args: Array[String]): Unit = {
     Logger.getLogger("org").setLevel(Level.OFF)

@@ -3,6 +3,7 @@ package org.example
 import org.apache.spark.{HashPartitioner, SparkConf, SparkContext}
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
+import org.apache.spark.rdd._
 
 object App {
 
@@ -79,10 +80,14 @@ object App {
        *.saveAsTextFile("out")*/
   }
   
-  object App {
+  // The method takes in an RDD of 12 columns and 2 ints. The functions are the placement of the desired columns to filter indexing 1-12, the same indexing as tuples
+  // The output is the filtered RDD 
+  // if need to increase or decrease RDD size, adjust the input/output format accordingly as well as the match case operations
   def helper(rdd: RDD[(String, String, String, String, String, String, String, String, String, String, String, String)],
              x: Int, y: Int): RDD[(String, String, String, String, String, String, String, String, String, String, String, String)] = {
     var filteredRdd = rdd
+    
+    // filter based on the first int input. Removes the rows that have an empty value in the x column
     x match {
       case 1 => (filteredRdd = rdd.filter(row => !row._1.isEmpty))
       case 2 => (filteredRdd = rdd.filter(row => !row._2.isEmpty))
@@ -97,7 +102,8 @@ object App {
       case 11 => (filteredRdd = rdd.filter(row => !row._11.isEmpty))
       case 12 => (filteredRdd = rdd.filter(row => !row._12.isEmpty))
     }
-
+    
+    // filter based on the second int input. Removes the rows that have an empty value in the y column
     y match {
       case 1 => (filteredRdd = filteredRdd.filter(row => !row._1.isEmpty))
       case 2 => (filteredRdd = filteredRdd.filter(row => !row._2.isEmpty))

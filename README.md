@@ -1,6 +1,10 @@
 # CSC 369 Final Project
 Linear Regression
 
+**THIS IS NOT THE SUBMISSION BRANCH**
+
+switch from `old-main` to `main` to see the submission branch
+
 [Housing Data](https://www.kaggle.com/datasets/thuynyle/redfin-housing-market-data?select=zip_code_market_tracker.tsv000)
 
 Per Lan's request, we'll only use the ZIP-based data file (3 GB).

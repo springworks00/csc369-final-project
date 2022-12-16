@@ -1,8 +1,8 @@
 # Linear Regression with Spark
 
-This is the submission branch
+A distributed linear regression calculator for predicting home prices.
 
-Input: name of x variable and the data files 
+**INPUT:** name of x variable and the input files 
 
-Output: printed regression equation y=mx+b where y is the home price, m is the slope, and b is the y-intercept
+**OUTPUT:** printed regression equation `y = mx + b` where `y` is the home price, `m` is the slope, and `b` is the y-intercept
 
